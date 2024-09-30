@@ -1,0 +1,35 @@
+/* App.css */
+.app-container {
+  padding: 40px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #e3f2fd, #e9ecef);
+  min-height: 100vh;
+  font-family: 'Roboto', sans-serif;
+}
+
+.app-container h1 {
+  color: #343a40;
+  margin-bottom: 40px;
+  font-size: 3rem;
+  background: linear-gradient(to right, #007bff, #6f42c1);
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-bottom: 3px solid #6f42c1;
+  display: inline-block;
+}
+
+.content-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Align items at the top */
+  flex-wrap: nowrap; /* Prevent the items from wrapping */
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.rtsp-player, .overlay-settings {
+  flex: 1; /* Each will take an equal share of space */
+  min-width: 400px; /* Prevent the sections from shrinking too small */
+}

@@ -1,0 +1,40 @@
+/* RTSPPlayer.css */
+.rtsp-player {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  max-width: 600px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  flex-shrink: 0; /* Prevent shrinking when the video size increases */
+}
+
+.rtsp-player h2 {
+  color: #343a40;
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+}
+
+.rtsp-input {
+  padding: 15px;
+  width: 85%;
+  border: 2px solid #ececec;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.rtsp-input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  border: 2px solid #ececec;
+  border-radius: 8px;
+  overflow: hidden;
+}
