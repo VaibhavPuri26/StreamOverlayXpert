@@ -1,4 +1,4 @@
-/* OverlaySettings.css */
+
 .overlay-settings {
   background-color: #ffffff;
   padding: 40px;
@@ -6,7 +6,7 @@
   max-width: 800px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  flex-shrink: 0; /* Prevent shrinking when the video size increases */
+  flex-shrink: 0; 
 }
 
 .overlay-settings:hover {

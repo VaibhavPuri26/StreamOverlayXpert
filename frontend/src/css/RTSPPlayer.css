@@ -1,4 +1,4 @@
-/* RTSPPlayer.css */
+
 .rtsp-player {
   background-color: #ffffff;
   padding: 30px;
@@ -6,7 +6,7 @@
   max-width: 600px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   text-align: center;
-  flex-shrink: 0; /* Prevent shrinking when the video size increases */
+  flex-shrink: 0; 
 }
 
 .rtsp-player h2 {

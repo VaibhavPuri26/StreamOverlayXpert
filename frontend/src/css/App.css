@@ -1,4 +1,4 @@
-/* App.css */
+
 .app-container {
   padding: 40px 20px;
   text-align: center;
@@ -23,13 +23,13 @@
 .content-container {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start; /* Align items at the top */
-  flex-wrap: nowrap; /* Prevent the items from wrapping */
+  align-items: flex-start; 
+  flex-wrap: nowrap; 
   gap: 40px;
   margin-top: 20px;
 }
 
 .rtsp-player, .overlay-settings {
-  flex: 1; /* Each will take an equal share of space */
-  min-width: 400px; /* Prevent the sections from shrinking too small */
+  flex: 1; 
+  min-width: 400px; 
 }

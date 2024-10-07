@@ -1,16 +1,16 @@
 import os
 from flask import Blueprint, request, jsonify
-from bson import ObjectId  # Import ObjectId for handling MongoDB _id
+from bson import ObjectId  
 from werkzeug.utils import secure_filename
 from config import overlays_collection
 
 overlay_blueprint = Blueprint('overlays', __name__)
 
-# Directory to store uploaded images
+
 UPLOAD_FOLDER = "./uploads"
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
-# Create an overlay (handles both text and image)
+
 @overlay_blueprint.route('/overlay', methods=['POST'])
 def create_overlay():
     text = request.form.get("text", "")
@@ -38,17 +38,17 @@ def create_overlay():
         'image': image_path
     }), 201
 
-# Read all overlays
+
 @overlay_blueprint.route('/overlay', methods=['GET'])
 def read_overlays():
     overlays = list(overlays_collection.find({}, {'_id': 1, 'text': 1, 'position': 1, 'image': 1}))
     for overlay in overlays:
-        overlay['_id'] = str(overlay['_id'])  # Convert ObjectId to string
+        overlay['_id'] = str(overlay['_id'])  
         if overlay.get('image'):
             overlay['image'] = f"http://127.0.0.1:5000/uploads/{os.path.basename(overlay['image'])}"
     return jsonify(overlays)
 
-# Update an overlay
+
 @overlay_blueprint.route('/overlay/<string:id>', methods=['PUT'])
 def update_overlay(id):
     text = request.form.get("text", "")
@@ -74,7 +74,7 @@ def update_overlay(id):
         return jsonify({'message': 'Overlay updated', 'id': id}), 200
     return jsonify({'error': 'Overlay not found'}), 404
 
-# Delete an overlay
+
 @overlay_blueprint.route('/overlay/<string:id>', methods=['DELETE'])
 def delete_overlay(id):
     result = overlays_collection.delete_one({'_id': ObjectId(id)})

@@ -1,7 +1,6 @@
-// RTSPPlayer.js
 import React, { useState, useEffect, useRef } from "react";
 import Hls from "hls.js";
-import Draggable from "react-draggable"; // Import react-draggable
+import Draggable from "react-draggable"; 
 import "../css/RTSPPlayer.css";
 
 const RTSPPlayer = ({ overlays }) => {
